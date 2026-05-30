@@ -1,0 +1,145 @@
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(ellipse 60% 60% at 70% 50%, rgba(255, 52, 142, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 20% 80%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
+    padding: 4rem 0;
+}
+
+.hero-tags{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.tag{
+    font-family: var(--fonte-corpo);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.tag-pink{
+    background: var(--pink-dim);
+    border-color: var(--pink-borda);
+    color: var(--pink)
+}
+
+.tag-cyan{
+    background: var(--cyan-dim);
+    border-color: var(--cyan-borda);
+    color: var(--cyan);
+}
+
+.hero-titulo{
+    font-family: var(--fonte-titulo);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-titulo span{
+    color: var(--pink);
+    text-shadow: 0 0 30px rgba(255, 52, 142, 0.5);
+}
+
+.hero-subtitulo{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--texto-2);
+    max-width: 520px;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero-subtitulo strong{
+    color: var(--pink);
+    font-weight: 600;
+}
+
+.hero-botoes{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.btn{
+    font-family: var(--fonte-titulo);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: 1px solid;
+    transition: var(--transicao);
+    cursor: pointer;
+}
+
+.btn-pink{
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 52, 142, 0.4);
+}
+
+.btn-pink:hover{
+    box-shadow: 0 0 35px rgba(255, 52, 142, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-outline{
+    background: transparent;
+    border-color: var(--cyan-borda);
+    color: var(--cyan);
+}
+
+.btn-outline:hover{
+    border-color: var(--cyan);
+    background: var(--cyan-dim);
+    transform: translateY(-2px);
+}
+
+.hero-stats{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+    background: rgba(10, 1, 24, 0.6);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    width: fit-content;
+}
+
+.stat{
+    text-align: center;
+}
+
+.pink{    color: var(--pink);
+}
+.cyan{    color: var(--cyan);
+}
+.purple{    color: #9b5de5;
+}
+
+.stat-label{
+    font-size:0.65rem;
+    color: var(--texto-2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.stat-dividor{
+    width: 1px;
+    height: 36px;
+    background: var(--borda);
+}
