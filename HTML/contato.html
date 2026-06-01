@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página — SpaceWaste</title>
+  <title>Contato — SpaceWaste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/contato.css">
+  <script src="https://kit.fontawesome.com/6a8e84955a.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -23,7 +25,7 @@
       <li><a href="./sobre.html">Sobre</a></li>
       <li><a href="./faq.html">FAQ</a></li>
       <li><a href="./integrantes.html">Equipe</a></li>
-      <li><a href="./contato.html">Contato</a></li>
+      <li><a href="./contato.html" class="ativo">Contato</a></li>
       <li><a href="./simulador.html">Simulador</a></li>
       <li><a href="./dashboard.html">Dashboard</a></li>
       <li><a href="./quiz.html">Quiz</a></li>
@@ -31,13 +33,149 @@
     </ul>
   </nav>
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="secao-label">Fale conosco</span>
+        <h1 class="page-hero-titulo">
+          Entre em <span class="pink">Contato</span>
+        </h1>
+        <p class="page-hero-desc">
+          Dúvidas, sugestões ou quer colaborar com o projeto?
+          Nossa equipe está pronta para responder.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container contato-layout">
+        <div class="contato-info">
+          <div>
+            <span class="secao-label">Projeto acadêmico</span>
+            <h2 class="secao-titulo" style="font-size:1.4rem">
+              SpaceWaste<br>
+              <span class="pink">FIAP · AstroDevs · 2026</span>
+            </h2>
+            <p class="info-desc">
+              Este é um projeto desenvolvido para a Global Solution da FIAP.
+              Toda mensagem enviada é monitorada pela equipe e respondida
+              assim que possível.
+            </p>
+          </div>
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-card-icone"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-card-conteudo">
+                <div class="info-card-label">E-mail da equipe</div>
+                <div class="info-card-valor">astrodevs@gmail.com</div>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icone"><i class="fa-brands fa-github"></i></div>
+              <div class="info-card-conteudo">
+                <div class="info-card-label">Repositório do GitHub</div>
+                <a href="#" target="_blank" rel="noopener"
+                   class="info-card-valor info-card-link">
+                  github.com/astrodevs ↗
+                </a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icone"><i class="fa-solid fa-map-marker-alt"></i></div>
+              <div class="info-card-conteudo">
+                <div class="info-card-label">Instituição</div>
+                <div class="info-card-valor">FIAP — São Paulo, SP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contato-form-wrap">
+          <div id="form-container" class="form-container">
+            <form id="contato-form" class="contato-form" novalidate>
+              <div class="campo-grupo" id="campo-nome">
+                <label class="campo-label" for="nome">
+                  Nome completo <span class="campo-obrigatorio">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="campo-input"
+                  placeholder="Seu nome completo"
+                  maxlength="80"
+                >
+                <span class="campo-erro" id="erro-nome"></span>
+              </div>
+              <div class="campo-grupo" id="campo-email">
+                <label class="campo-label" for="email">
+                  E-mail <span class="campo-obrigatorio">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="campo-input"
+                  placeholder="seu@email.com"
+                  maxlength="120"
+                >
+                <span class="campo-erro" id="erro-email"></span>
+              </div>
+              <div class="campo-grupo" id="campo-assunto">
+                <label class="campo-label" for="assunto">
+                  Assunto <span class="campo-obrigatorio">*</span>
+                </label>
+                <select id="assunto" name="assunto" class="campo-input campo-select">
+                  <option value="">Selecione um assunto...</option>
+                  <option value="duvida">💬 Dúvida sobre o projeto</option>
+                  <option value="sugestao">💡 Sugestão de melhoria</option>
+                  <option value="parceria">🤝 Interesse em parceria</option>
+                  <option value="feedback">⭐ Feedback</option>
+                  <option value="outro">📌 Outro</option>
+                </select>
+                <span class="campo-erro" id="erro-assunto"></span>
+              </div>
+              <div class="campo-grupo" id="campo-mensagem">
+                <label class="campo-label" for="mensagem">
+                  Mensagem <span class="campo-obrigatorio">*</span>
+                </label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="campo-input campo-textarea"
+                  placeholder="Escreva sua mensagem... (mínimo 20 caracteres)"
+                  maxlength="500"
+                  rows="5"
+                ></textarea>
+                <span class="campo-erro" id="erro-mensagem"></span>
+              </div>
+              <button type="submit" class="btn btn-pink btn-enviar">
+                Enviar mensagem
+              </button>
+            </form>
+          </div>
+          <div id="form-sucesso" class="form-sucesso">
+            <div class="sucesso-icone">✅</div>
+            <h3 class="sucesso-titulo">Mensagem enviada!</h3>
+            <p class="sucesso-desc">
+              Obrigado por entrar em contato. Responderemos o mais breve possível.
+            </p>
+            <button class="btn btn-outline" id="btn-nova-mensagem">
+              Enviar outra mensagem
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="footer-logo">Space<span>Waste</span></div>
-          <p class="footer-desc">Plataforma educacional sobre lixo espacial. Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.</p>
+          <p class="footer-desc">
+            Plataforma educacional sobre lixo espacial.
+            Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.
+          </p>
         </div>
         <div>
           <p class="footer-col-titulo">Plataforma</p>
@@ -65,5 +203,6 @@
     </div>
   </footer>
   <script src="../JS/nav.js"></script>
+  <script src="../JS/contato.js"></script>
 </body>
 </html>
