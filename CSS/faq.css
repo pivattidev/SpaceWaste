@@ -313,7 +313,6 @@
       flex-shrink: 0;
     }
 
-    .faq-stat-info {}
     .faq-stat-valor {
       font-family: var(--fonte-titulo);
       font-size: 1.1rem;
@@ -391,9 +390,13 @@
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
       .faq-pergunta { padding: 1.25rem; }
       .faq-resposta { padding: 0 1.25rem 1.25rem; padding-top: 1rem; }
+      .page-hero-titulo {
+        font-size: 1.8rem;
+        text-align: center;
+      }
     }
 
     /* ── ANIMAÇÕES DE ENTRADA ────────────────────────────────────────── */
