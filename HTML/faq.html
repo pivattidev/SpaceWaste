@@ -3,67 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página — SpaceWaste</title>
+  <title>SpaceWaste — FAQ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="https://kit.fontawesome.com/6a8e84955a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../CSS/faq.css">
+  <script src="../JS/faq.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="nav-logo">
-      Space<span>Waste</span>
-    </a>
-    <button class="nav-toggle" id="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="/index.html" class="nav-logo">Space<span>Waste</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html">Início</a></li>
-      <li><a href="./sobre.html">Sobre</a></li>
-      <li><a href="./faq.html">FAQ</a></li>
-      <li><a href="./integrantes.html">Equipe</a></li>
-      <li><a href="./contato.html">Contato</a></li>
-      <li><a href="./simulador.html">Simulador</a></li>
-      <li><a href="./dashboard.html">Dashboard</a></li>
-      <li><a href="./quiz.html">Quiz</a></li>
-      <li><a href="./missoes.html">Missões</a></li>
+      <li><a href="../HTML/sobre.html">Sobre</a></li>
+      <li><a href="./faq.html" class="ativo">FAQ</a></li>
+      <li><a href="../HTML/integrantes.html">Equipe</a></li>
+      <li><a href="../HTML/contato.html">Contato</a></li>
+      <li><a href="../HTML/simulador.html">Simulador</a></li>
+      <li><a href="../HTML/dashboard.html">Dashboard</a></li>
+      <li><a href="../HTML/quiz.html">Quiz</a></li>
+      <li><a href="../HTML/missoes.html">Missões</a></li>
     </ul>
   </nav>
+
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="label-tag">Perguntas Frequentes</span>
+        <h1 class="page-hero-titulo">
+          FAQ <span class="pink">Space</span><span class="cyan">Waste</span>
+        </h1>
+        <p class="page-hero-desc">
+          Tudo o que você precisa saber sobre a plataforma, o problema do lixo orbital e como o sistema funciona.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+
+
+    <section class="secao">
+      <div class="container">
+
+
+        <div class="faq-lista" id="faq-lista">
+
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-numero">01</span>
+              <span class="faq-pergunta-texto">O que é o SpaceWaste?</span>
+              <span class="faq-icone"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-corpo">
+              <div class="faq-corpo-inner">
+                <p class="faq-resposta">
+                  O SpaceWaste é uma plataforma educacional interativa desenvolvida para explicar o problema do lixo na órbita da Terra. O sistema traduz dados de engenharia aeroespacial em recursos visuais fortes no front-end, permitindo que estudantes e entusiastas compreendam os riscos da poluição espacial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-numero">02</span>
+              <span class="faq-pergunta-texto">Por que o lixo espacial é considerado um risco real?</span>
+              <span class="faq-icone"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-corpo">
+              <div class="faq-corpo-inner">
+                <p class="faq-resposta">
+                  Atualmente existem mais de 27 mil detritos sendo ativamente monitorados. Viajando a altíssimas velocidades em órbita, mesmo pequenos fragmentos podem destruir satélites de comunicação, previsão do tempo e GPS, além de colocar em risco missões espaciais tripuladas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-numero">03</span>
+              <span class="faq-pergunta-texto">Como o projeto se conecta com a ODS 13 (Ação Climática) da ONU?</span>
+              <span class="faq-icone"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-corpo">
+              <div class="faq-corpo-inner">
+                <p class="faq-resposta">
+                  O projeto SpaceWaste atua diretamente na meta de conscientização e educação ambiental da ODS 13. O monitoramento do clima e do aquecimento global na Terra depende crucialmente de satélites meteorológicos e ambientais. Proteger a órbita terrestre da poluição por detritos significa salvaguardar as ferramentas tecnológicas que a humanidade utiliza para estudar as mudanças climáticas, monitorar o desmatamento e prever desastres ecológicos no planeta.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-numero">04</span>
+              <span class="faq-pergunta-texto">O que é a Síndrome de Kessler e como a plataforma ajuda a entender esse cenário?</span>
+              <span class="faq-icone"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-corpo">
+              <div class="faq-corpo-inner">
+                <p class="faq-resposta">
+                  A Síndrome de Kessler descreve um efeito dominó: quando a densidade de objetos na órbita baixa da Terra for alta o 
+                suficiente, as colisões entre eles criarão uma reação em cadeia, gerando cada vez mais fragmentos. Eventualmente, essa 
+                nuvem de lixo se tornará tão densa que tornará certas órbitas completamente intransitáveis e inúteis para futuras gerações.
+                O SpaceWaste ajuda a visualizar esse perigo através do simulador. Ao registrar objetos fictícios
+                e calcular o tempo de reentrada, os usuários conseguem ver na prática que detritos em altitudes elevadas podem passar 
+                centenas ou milhares de anos em órbita sem decair naturalmente. Isso demonstra a urgência de missões de remoção ativa de lixo
+                e a necessidade de leis rígidas de sustentabilidade espacial antes que o ponto crítico da Síndrome de Kessler seja 
+                alcançado.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-numero">05</span>
+              <span class="faq-pergunta-texto">De onde vêm os dados reais sobre os detritos exibidos no painel?</span>
+              <span class="faq-icone"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="faq-corpo">
+              <div class="faq-corpo-inner">
+                <p class="faq-resposta">
+                  Os dados sobre os detritos espaciais exibidos na plataforma são de caráter público e baseados em monitoramentos reais realizados por agências aeroespaciais internacionais, como a SSN (Space Surveillance Network)
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divisor"></div>
+
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="footer-logo">Space<span>Waste</span></div>
-          <p class="footer-desc">Plataforma educacional sobre lixo espacial. Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.</p>
+          <p class="footer-desc">Plataforma educacional sobre lixo espacial. Um projeto acadêmico do grupo AstroDevs para o FIAP Global Solution 2026.</p>
         </div>
         <div>
-          <p class="footer-col-titulo">Plataforma</p>
+          <div class="footer-col-titulo">Navegação</div>
           <ul class="footer-links">
-            <li><a href="./simulador.html">Simulador Orbital</a></li>
-            <li><a href="./dashboard.html">Dashboard</a></li>
-            <li><a href="./quiz.html">Quiz</a></li>
-            <li><a href="./missoes.html">Missões</a></li>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/HTML/sobre.html">Sobre</a></li>
+            <li><a href="/HTML/faq.html">FAQ</a></li>
+            <li><a href="/HTML/integrantes.html">Equipe</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-col-titulo">Informações</p>
+          <div class="footer-col-titulo">Plataforma</div>
           <ul class="footer-links">
-            <li><a href="./sobre.html">Sobre o projeto</a></li>
-            <li><a href="./integrantes.html">Equipe</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="/HTML/simulador.html">Simulador</a></li>
+            <li><a href="/HTML/dashboard.html">Dashboard</a></li>
+            <li><a href="/HTML/quiz.html">Quiz</a></li>
+            <li><a href="/HTML/missoes.html">Missões</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 <strong>SpaceWaste</strong> — AstroDevs</span>
-        <span>Dados: NASA ODPO / ESA Space Debris Office</span>
+        <span>© 2026 AstroDevs · FIAP Global Solution</span>
+        <span>Feito com <span class="pink">♥</span> e muito café</span>
       </div>
     </div>
   </footer>
-  <script src="/JS/nav.js"></script>
+
 </body>
 </html>
