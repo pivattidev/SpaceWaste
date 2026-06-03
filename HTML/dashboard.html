@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
 <body>
   <nav class="navbar">
@@ -31,6 +32,49 @@
     </ul>
   </nav>
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="secao-label">Dados em tempo real</span>
+        <h1 class="page-hero-titulo">
+          Painel de <span class="pink">Dados</span>
+        </h1>
+        <p class="page-hero-desc">
+          Estatísticas reais sobre lixo espacial, raking de países e assistente inteligente SpaceBot - tudo em um só lugar.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+    <section class="secao">
+      <div class="container">
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"></div>
+            <div class="dash-stat-valor pink">27.000+</div>
+            <div class="dash-stat-label">Detritos rastreados</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:100%; background:var(--pink)"></div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"></div>
+            <div class="dash-stat-valor cyan">500.000</div>
+            <div class="dash-stat-label">Fragmentos estimados maiores que 1cm</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:85%"; background:var(--cyan)"></div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"></div>
+            <div class="dash-stat-valor" style="color:#f0c040">9.300t</div>
+            <div class="dash-stat-label">Massa total em órbita</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:60%"; background:#f0c040"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
   </main>
   <footer class="footer">
     <div class="container">
