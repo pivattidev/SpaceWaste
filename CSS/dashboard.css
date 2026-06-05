@@ -460,4 +460,10 @@
   .dash-stats-grid { grid-template-columns: 1fr 1fr; }
   .dash-chat-balao { max-width: 88%; }
   .dash-chip       { font-size: 0.7rem; padding: 5px 10px; }
+  .dash-stat-card {
+    max-width: 100%;
+  }
+  .dash-stat-valor {
+    font-size: 1rem;
+  }
 }
