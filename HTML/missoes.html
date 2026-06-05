@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceWaste - Missões</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/missoes.css">
+  <script src="https://kit.fontawesome.com/6a8e84955a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      Space<span>Waste</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="./sobre.html">Sobre</a></li>
+      <li><a href="./faq.html">FAQ</a></li>
+      <li><a href="./integrantes.html">Equipe</a></li>
+      <li><a href="./contato.html">Contato</a></li>
+      <li><a href="./simulador.html">Simulador</a></li>
+      <li><a href="./dashboard.html">Dashboard</a></li>
+      <li><a href="./missoes.html" class="ativo">Missões</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="secao-label">Soluções reais</span>
+        <h1 class="page-hero-titulo">
+          Missões de <span class="pink">Limpeza</span>
+        </h1>
+        <p class="page-hero-desc">
+          A humanidade já está agindo. Conheça as missões reais desenvolvidas
+          para remover detritos orbitais e proteger o futuro do espaço.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">Missões ativas e planejadas</span>
+        <h2 class="secao-titulo">Quem está <span class="pink">agindo</span> agora</h2>
+        <p class="secao-desc">
+          Agências e empresas ao redor do mundo desenvolvem tecnologias
+          inéditas para capturar e remover detritos orbitais.
+        </p>
+        <div class="missoes-lista">
+          <div class="missao-card">
+            <div class="missao-topo">
+              <div class="missao-icone pink"><i class="fas fa-satellite"></i></div>
+              <div>
+                <h3 class="missao-nome">ClearSpace-1</h3>
+                <span class="missao-org">ESA + ClearSpace SA · 2026</span>
+              </div>
+              <span class="missao-status planejada">Planejada</span>
+            </div>
+            <p class="missao-desc">
+              Primeira missão comercial de remoção ativa de detritos. Vai capturar
+              o adaptador Vespa de 112kg usando quatro braços robóticos e levá-lo
+              de volta à atmosfera para queimar na reentrada.
+            </p>
+            <div class="missao-tags">
+              <span class="missao-tag">LEO · 664 km</span>
+              <span class="missao-tag">Braço robótico</span>
+              <span class="missao-tag">Alvo: Adaptador Vespa</span>
+            </div>
+          </div>
+          <div class="missao-card">
+            <div class="missao-topo">
+              <div class="missao-icone cyan"><i class="fas fa-network-wired"></i></div>
+              <div>
+                <h3 class="missao-nome">RemoveDEBRIS</h3>
+                <span class="missao-org">Universidade de Surrey + Airbus · 2018</span>
+              </div>
+              <span class="missao-status concluida">Concluída</span>
+            </div>
+            <p class="missao-desc">
+              Testou com sucesso rede e arpão em órbita real para capturar
+              um cubesat-alvo. Também testou vela de frenagem para acelerar
+              a reentrada atmosférica de detritos.
+            </p>
+            <div class="missao-tags">
+              <span class="missao-tag">LEO · 400 km</span>
+              <span class="missao-tag">Rede + arpão</span>
+              <span class="missao-tag">Alvo: Cubesat simulado</span>
+            </div>
+          </div>
+          <div class="missao-card">
+            <div class="missao-topo">
+              <div class="missao-icone purple"><i class="fas fa-magnet"></i></div>
+              <div>
+                <h3 class="missao-nome">ELSA-d</h3>
+                <span class="missao-org">Astroscale · 2021</span>
+              </div>
+              <span class="missao-status ativa">Em operação</span>
+            </div>
+            <p class="missao-desc">
+              Demonstrou captura e liberação de satélite por acoplamento magnético.
+              A tecnologia exige uma placa magnética instalada antes do lançamento,
+              tornando satélites futuros "removíveis por design".
+            </p>
+            <div class="missao-tags">
+              <span class="missao-tag">LEO · 550 km</span>
+              <span class="missao-tag">Acoplamento magnético</span>
+              <span class="missao-tag">Alvo: Satélite-cliente</span>
+            </div>
+          </div>
+          <div class="missao-card">
+            <div class="missao-topo">
+              <div class="missao-icone amarelo"><i class="fas fa-eye"></i></div>
+              <div>
+                <h3 class="missao-nome">ADRAS-J</h3>
+                <span class="missao-org">JAXA + Astroscale · 2024</span>
+              </div>
+              <span class="missao-status ativa">Em operação</span>
+            </div>
+            <p class="missao-desc">
+              Primeira missão governamental de remoção ativa. Aproximou-se com
+              sucesso de um estágio de foguete H-2A abandonado em 2009 para
+              inspeção próxima, preparando a futura captura e desórbita.
+            </p>
+            <div class="missao-tags">
+              <span class="missao-tag">LEO · 600 km</span>
+              <span class="missao-tag">Inspeção + captura</span>
+              <span class="missao-tag">Alvo: Estágio H-2A</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">Como funciona</span>
+        <h2 class="secao-titulo">Tecnologias de <span class="cyan">captura</span></h2>
+        <p class="secao-desc">
+          Remover um objeto em alta velocidade no espaço é um dos maiores
+          desafios da engenharia moderna. Veja os métodos em desenvolvimento.
+        </p>
+        <div class="tec-grid">
+          <div class="tec-item">
+            <div class="tec-icone pink"><i class="fas fa-wifi"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Rede Espacial</h3>
+              <p class="tec-desc">Uma rede envolve e prende o detrito. Funciona em objetos sem cooperação. Testada pelo RemoveDEBRIS em 2018.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <div class="tec-icone cyan"><i class="fas fa-crosshairs"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Arpão Orbital</h3>
+              <p class="tec-desc">Perfura e prende estruturas metálicas rígidas como estágios de foguete. Preciso para alvos grandes e sólidos.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <div class="tec-icone purple"><i class="fas fa-robot"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Braço Robótico</h3>
+              <p class="tec-desc">O método mais preciso e controlável. Braços mecânicos agarram o detrito com segurança. Será usado pela ClearSpace-1.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <div class="tec-icone cyan"><i class="fas fa-magnet"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Acoplamento Magnético</h3>
+              <p class="tec-desc">Captura suave via ímã. Exige placa magnética no satélite original, mas é o método mais seguro para objetos cooperativos.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <div class="tec-icone pink"><i class="fas fa-wind"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Vela de Frenagem</h3>
+              <p class="tec-desc">Aumenta o arrasto atmosférico, reduzindo a vida útil em órbita de séculos para anos. Simples e de baixo custo.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <div class="tec-icone amarelo"><i class="fas fa-bolt"></i></div>
+            <div class="tec-conteudo">
+              <h3 class="tec-nome">Laser Terrestre</h3>
+              <p class="tec-desc">Aquece a superfície do detrito criando empuxo que altera sua órbita. Promissor para objetos pequenos sem missão espacial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">ODS 13 — Ação Climática</span>
+        <h2 class="secao-titulo">O que <span class="pink">você</span> pode fazer</h2>
+        <p class="secao-desc">
+          O lixo espacial não é problema só de agências espaciais. GPS,
+          previsão do tempo, internet e telecomunicações dependem de órbitas
+          seguras. Proteger o espaço é proteger a vida moderna.
+        </p>
+        <div class="ods-acoes">
+          <div class="ods-acao">
+            <div class="ods-acao-icone"><i class="fas fa-share-alt"></i></div>
+            <div>
+              <div class="ods-acao-titulo">Compartilhe o conhecimento</div>
+              <div class="ods-acao-desc">Fale sobre lixo espacial. A conscientização pública pressiona por regulamentação.</div>
+            </div>
+          </div>
+          <div class="ods-acao">
+            <div class="ods-acao-icone"><i class="fas fa-vote-yea"></i></div>
+            <div>
+              <div class="ods-acao-titulo">Apoie regulamentação espacial</div>
+              <div class="ods-acao-desc">Exija que governos e empresas adotem regras obrigatórias de desórbita para novos satélites.</div>
+            </div>
+          </div>
+          <div class="ods-acao">
+            <div class="ods-acao-icone"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <div class="ods-acao-titulo">Eduque-se e eduque outros</div>
+              <div class="ods-acao-desc">Use o Quiz e o Dashboard do SpaceWaste para aprender e ensinar sobre sustentabilidade espacial.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Space<span>Waste</span></div>
+          <p class="footer-desc">Plataforma educacional sobre lixo espacial. Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.</p>
+        </div>
+        <div>
+          <p class="footer-col-titulo">Plataforma</p>
+          <ul class="footer-links">
+            <li><a href="./simulador.html">Simulador Orbital</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./missoes.html">Missões</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-titulo">Informações</p>
+          <ul class="footer-links">
+            <li><a href="./sobre.html">Sobre o projeto</a></li>
+            <li><a href="./integrantes.html">Equipe</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 <strong>SpaceWaste</strong> — AstroDevs</span>
+        <span>Dados: NASA ODPO / ESA Space Debris Office</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../JS/nav.js"></script>
+</body>
+</html>
