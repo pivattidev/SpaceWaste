@@ -92,6 +92,20 @@
   margin-bottom: 2px;
 }
 
+.missao-nome a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.missao-nome a:hover {
+    text-decoration: underline;
+}
+
+.missao-nome.pink a{ color: var(--pink); }
+.missao-nome.cyan a{ color: var(--cyan); }
+.missao-nome.purple a{ color: #9b5de5; }
+.missao-nome.amarelo a{ color: #f0c040; }
+
 .missao-org {
   font-size: 0.75rem;
   color: var(--texto-2);
