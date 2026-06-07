@@ -1,0 +1,44 @@
+.sobre_resumo-secao {
+  padding: 3rem 0;
+}
+
+.sobre-resumo{
+  display: flex;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.sobre-card {
+  background: var(--br-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+}
+
+.sobre-card-numero {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--cyan);
+  font-family: var(--font-titulo);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.sobre-card h2{
+  margin-bottom: 0.75rem;
+  font-family: var(--font-titulo);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sobre-card p {
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .sobre-resumo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
