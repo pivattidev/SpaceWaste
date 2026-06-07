@@ -168,23 +168,60 @@
     /* ── SECAO ───────────────────────────────────────────────────────── */
     .secao { padding: 5rem 0; }
 
-    /* ── Sobre ACCORDION ───────────────────────────────────────────────── */
-    .sobre-lista {
+    /* ── Sobre ACCORDION .. ───────────────────────────────────────────────── */
+
+    .sobre-resumo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .sobre-card {
+      background-color:  var(--bg-card);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio);
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      margin-top: 1.5rem;
+      transition: var(--transicao);
+      text-align: left;
+      position: relative;
+      box-sizing: border-box;
     }
-    
-    .sobre-texto {
-      font-family: var(--fonte-corpo);
-      font-size: 1rem;
-      letter-spacing: 2px;
-      color: var(--texto);
+
+    .sobre-card:hover {
+      border-color: var(--pink-borda);
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(255, 52, 142, 0.15), 0 10px rgba(255, 52, 142, 0.1);
+    }
+
+    .sobre-card .sobre-numero {
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--pink);
       display: block;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(255, 52, 142, 0.3);
     }
-   
+
+    .sobre-titulo{
+      font-family: var(--fonte-titulo);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--texto);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      transition: color 0.3s ease;
+    }
+
+    .sobre-card:hover .sobre-titulo {
+      color: var(--pink);
+    }
 
     /* ── FOOTER ──────────────────────────────────────────────────────── */
     .footer {
