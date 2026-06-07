@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página — SpaceWaste</title>
+  <title>Simulador Orbital — SpaceWaste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
-  <script src="../JS/nav.js" defer></script>
+  <link rel="stylesheet" href="../CSS/simulador.css">
+  <script src="https://kit.fontawesome.com/6a8e84955a.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -15,9 +16,7 @@
       Space<span>Waste</span>
     </a>
     <button class="nav-toggle" id="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html">Início</a></li>
@@ -31,6 +30,171 @@
     </ul>
   </nav>
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="secao-label">Ferramenta interativa</span>
+        <h1 class="page-hero-titulo">
+          Simulador <span class="pink">Orbital</span>
+        </h1>
+        <p class="page-hero-desc">
+          Registre um objeto fictício em órbita e veja os cálculos reais
+          sobre velocidade, período e tempo de reentrada na atmosfera.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container sim-layout">
+        <div class="sim-form-wrap">
+          <div class="sim-form-header">
+            <div class="sim-dot"></div>
+            <span class="sim-form-titulo">Dados do objeto</span>
+          </div>
+          <form id="sim-form" class="sim-form" novalidate>
+            <div class="campo-grupo" id="campo-nome">
+              <label class="campo-label" for="nome">
+                Nome do objeto <span class="campo-obrigatorio">*</span>
+              </label>
+              <input
+                type="text"
+                id="nome"
+                class="campo-input"
+                placeholder="Ex: Detrito FIAP-01"
+                maxlength="40"
+              >
+              <span class="campo-erro" id="erro-nome"></span>
+            </div>
+            <div class="campo-grupo" id="campo-altitude">
+              <label class="campo-label" for="altitude">
+                Altitude (km) <span class="campo-obrigatorio">*</span>
+              </label>
+              <input
+                type="number"
+                id="altitude"
+                class="campo-input"
+                placeholder="Ex: 400"
+                min="160"
+                max="36000"
+              >
+              <span class="campo-dica">Entre 160 km (LEO mínimo) e 36.000 km (GEO)</span>
+              <span class="campo-erro" id="erro-altitude"></span>
+            </div>
+            <div class="campo-grupo" id="campo-massa">
+              <label class="campo-label" for="massa">
+                Massa (kg) <span class="campo-obrigatorio">*</span>
+              </label>
+              <input
+                type="number"
+                id="massa"
+                class="campo-input"
+                placeholder="Ex: 100"
+                min="1"
+                max="100000"
+              >
+              <span class="campo-erro" id="erro-massa"></span>
+            </div>
+            <div class="campo-grupo" id="campo-tipo">
+              <label class="campo-label" for="tipo">
+                Tipo do objeto <span class="campo-obrigatorio">*</span>
+              </label>
+              <select id="tipo" class="campo-input campo-select">
+                <option value="">Selecione o tipo...</option>
+                <option value="satelite">Satélite</option>
+                <option value="detrito">Detrito</option>
+                <option value="foguete">Estágio de foguete</option>
+                <option value="cubesat">CubeSat</option>
+              </select>
+              <span class="campo-erro" id="erro-tipo"></span>
+            </div>
+            <button type="submit" class="btn btn-pink btn-simular">
+              <i class="fas fa-satellite"></i>
+              Simular órbita
+            </button>
+          </form>
+        </div>
+        <div class="sim-resultado-wrap">
+          <div class="sim-vazio" id="sim-vazio">
+            <div class="sim-vazio-icone">🛸</div>
+            <p class="sim-vazio-texto">
+              Preencha os dados ao lado e clique em
+              <strong>Simular órbita</strong> para ver os resultados.
+            </p>
+          </div>
+          <div class="sim-resultado" id="sim-resultado">
+            <div class="sim-resultado-header">
+              <div class="sim-dot"></div>
+              <span class="sim-form-titulo">Resultado da simulação</span>
+            </div>
+            <div class="sim-objeto-nome" id="res-nome"></div>
+            <div class="sim-objeto-tipo" id="res-tipo"></div>
+            <div class="sim-cards">
+              <div class="sim-card">
+                <div class="sim-card-icone pink"><i class="fas fa-tachometer-alt"></i></div>
+                <div class="sim-card-valor pink" id="res-velocidade">—</div>
+                <div class="sim-card-label">Velocidade orbital</div>
+              </div>
+              <div class="sim-card">
+                <div class="sim-card-icone cyan"><i class="fas fa-redo"></i></div>
+                <div class="sim-card-valor cyan" id="res-periodo">—</div>
+                <div class="sim-card-label">Período orbital</div>
+              </div>
+
+              <div class="sim-card">
+                <div class="sim-card-icone purple"><i class="fas fa-clock"></i></div>
+                <div class="sim-card-valor purple" id="res-reentrada">—</div>
+                <div class="sim-card-label">Tempo de reentrada</div>
+              </div>
+            </div>
+            <div class="sim-risco" id="sim-risco">
+              <div class="sim-risco-label">Nível de risco orbital</div>
+              <div class="sim-risco-valor" id="res-risco"></div>
+              <div class="sim-risco-desc" id="res-risco-desc"></div>
+            </div>
+            <button class="btn btn-outline" id="btn-resetar">
+              <i class="fas fa-redo"></i>
+              Nova simulação
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">Entenda os cálculos</span>
+        <h2 class="secao-titulo">Como o <span class="cyan">simulador</span> funciona</h2>
+        <div class="como-grid">
+          <div class="como-item">
+            <div class="como-icone pink"><i class="fas fa-tachometer-alt"></i></div>
+            <h3 class="como-titulo">Velocidade orbital</h3>
+            <p class="como-desc">
+              Quanto mais baixa a órbita, mais rápido o objeto precisa se mover
+              para não cair. Um satélite a 400 km orbita a cerca de 27.600 km/h.
+              A fórmula usa o raio da Terra e a altitude informada.
+            </p>
+          </div>
+          <div class="como-item">
+            <div class="como-icone cyan"><i class="fas fa-redo"></i></div>
+            <h3 class="como-titulo">Período orbital</h3>
+            <p class="como-desc">
+              É o tempo que o objeto leva para dar uma volta completa ao redor
+              da Terra. A ISS, a 400 km, completa uma órbita a cada
+              aproximadamente 92 minutos.
+            </p>
+          </div>
+          <div class="como-item">
+            <div class="como-icone purple"><i class="fas fa-clock"></i></div>
+            <h3 class="como-titulo">Tempo de reentrada</h3>
+            <p class="como-desc">
+              O arrasto atmosférico vai freando o objeto gradualmente. Abaixo
+              de 400 km ele rerentra em anos. Acima de 600 km pode demorar
+              séculos — por isso o lixo espacial é um problema tão sério.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
@@ -63,5 +227,7 @@
       </div>
     </div>
   </footer>
+  <script src="../JS/nav.js"></script>
+  <script src="../JS/simulador.js"></script>
 </body>
 </html>
