@@ -1,0 +1,268 @@
+.page-hero {
+  padding: calc(var(--nav-altura) + 3rem) 0 3rem;
+  position: relative;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 30% 60%, rgba(255,52,142,.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-hero-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin: 8px 0 16px;
+}
+
+.page-hero-desc {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--texto-2);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.page-hero-linha {
+  margin-top: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--cyan) 40%, transparent 100%);
+  opacity: 0.3;
+}
+
+.missoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 2rem;
+}
+
+.missao-card {
+  background: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 24px;
+  transition: var(--transicao);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.missao-card:hover {
+  border-color: var(--pink-borda);
+  transform: translateX(4px);
+  box-shadow: 0 6px 24px rgba(255,52,142,.08);
+}
+
+.missao-topo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.missao-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--raio);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.missao-icone.pink   { color:var(--pink);  background:var(--pink-dim);        border-color:var(--pink-borda); }
+.missao-icone.cyan   { color:var(--cyan);  background:var(--cyan-dim);        border-color:var(--cyan-borda); }
+.missao-icone.purple { color:#9b5de5; background:rgba(155,93,229,.1); border-color:rgba(155,93,229,.3); }
+.missao-icone.amarelo { color:#f0c040; background:rgba(240,192,64,.1); border-color:rgba(240,192,64,.3); }
+
+.missao-nome {
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 2px;
+}
+
+.missao-nome a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.missao-nome a:hover {
+    text-decoration: underline;
+}
+
+.missao-nome.pink a{ color: var(--pink); }
+.missao-nome.cyan a{ color: var(--cyan); }
+.missao-nome.purple a{ color: #9b5de5; }
+.missao-nome.amarelo a{ color: #f0c040; }
+
+.missao-org {
+  font-size: 0.75rem;
+  color: var(--texto-2);
+}
+
+.missao-status {
+  margin-left: auto;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.missao-status.ativa     { color:#00ff88; border-color:rgba(0,255,136,.3); background:rgba(0,255,136,.08); }
+.missao-status.planejada { color:#f0c040; border-color:rgba(240,192,64,.3); background:rgba(240,192,64,.08); }
+.missao-status.concluida { color:var(--cyan); border-color:var(--cyan-borda); background:var(--cyan-dim); }
+
+.missao-desc {
+  font-size: 0.88rem;
+  color: var(--texto-2);
+  line-height: 1.7;
+}
+
+.missao-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.missao-tag {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--borda);
+  color: var(--texto-2);
+}
+
+.tec-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.tec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  transition: var(--transicao);
+}
+
+.tec-item:hover {
+  border-color: var(--cyan-borda);
+  transform: translateX(4px);
+}
+
+.tec-icone {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.tec-icone.pink   { color:var(--pink);  background:var(--pink-dim);        border-color:var(--pink-borda); }
+.tec-icone.cyan   { color:var(--cyan);  background:var(--cyan-dim);        border-color:var(--cyan-borda); }
+.tec-icone.purple { color:#9b5de5; background:rgba(155,93,229,.1); border-color:rgba(155,93,229,.3); }
+.tec-icone.amarelo { color:#f0c040; background:rgba(240,192,64,.1); border-color:rgba(240,192,64,.3); }
+
+.tec-nome {
+  font-family: var(--fonte-titulo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 4px;
+}
+
+.tec-desc {
+  font-size: 0.85rem;
+  color: var(--texto-2);
+  line-height: 1.6;
+}
+
+.ods-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.ods-acao {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  transition: var(--transicao);
+}
+
+.ods-acao:hover {
+  border-color: var(--pink-borda);
+  transform: translateX(4px);
+}
+
+.ods-acao-icone {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--pink-dim);
+  border: 1px solid var(--pink-borda);
+  color: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.ods-acao-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 4px;
+}
+
+.ods-acao-desc {
+  font-size: 0.83rem;
+  color: var(--texto-2);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .missao-topo    { flex-wrap: wrap; }
+  .missao-status  { margin-left: 0; }
+  .missao-card    { padding: 18px; }
+  .tec-item       { padding: 14px; }
+  .ods-acao       { padding: 14px; }
+}

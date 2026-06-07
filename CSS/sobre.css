@@ -180,7 +180,7 @@ as informações: logo/descrição, links plataforma, links informações */
 
 @media (max-width: 900px) {
     .footer-resumo {
-        
+        grid-template-columns: 1fr;
     }
 
     .footer-grid {
@@ -231,4 +231,5 @@ as informações: logo/descrição, links plataforma, links informações */
 .sobre-card {
     animation: fadeInUp 0.5s ease both;
 }
+
 

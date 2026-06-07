@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página — SpaceWaste</title>
+  <title>Dashboard — SpaceWaste</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <script src="https://kit.fontawesome.com/6a8e84955a.js" crossorigin="anonymous"></script>
+  <script src="../JS/nav.js" defer></script>
+  <script src="../JS/dashboard.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -25,12 +29,319 @@
       <li><a href="./integrantes.html">Equipe</a></li>
       <li><a href="./contato.html">Contato</a></li>
       <li><a href="./simulador.html">Simulador</a></li>
-      <li><a href="./dashboard.html">Dashboard</a></li>
-      <li><a href="./quiz.html">Quiz</a></li>
+      <li><a href="./dashboard.html" class="ativo">Dashboard</a></li>
       <li><a href="./missoes.html">Missões</a></li>
     </ul>
   </nav>
   <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="secao-label">Dados em tempo real</span>
+        <h1 class="page-hero-titulo">
+          Painel de <span class="pink">Dados</span>
+        </h1>
+        <p class="page-hero-desc">
+          Estatísticas reais sobre lixo espacial, ranking de países e
+          assistente inteligente SpaceBot — tudo em um só lugar.
+        </p>
+      </div>
+      <div class="page-hero-linha"></div>
+    </section>
+    <div class="divisor"></div>
+    <section class="secao">
+      <div class="container">
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"><i class="fas fa-meteor"></i></div>
+            <div class="dash-stat-valor pink">27.000+</div>
+            <div class="dash-stat-label">Detritos rastreados</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:100%; background:var(--pink)"></div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"><i class="fas fa-ruler-combined"></i></div>
+            <div class="dash-stat-valor cyan">500.000+</div>
+            <div class="dash-stat-label">Fragmentos estimados maiores que 1cm</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:85%; background:var(--cyan)"></div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="dash-stat-valor purple">28.000 km/h</div>
+            <div class="dash-stat-label">Velocidade média dos detritos</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:90%; background:#9b5de5"></div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icone"><i class="fas fa-weight-hanging"></i></div>
+            <div class="dash-stat-valor" style="color:#f0c040">9.300t</div>
+            <div class="dash-stat-label">Massa total em órbita</div>
+            <div class="dash-stat-barra">
+              <div class="dash-stat-barra-fill" style="width:60%; background:#f0c040"></div>
+            </div>
+          </div>
+        </div>
+        <div class="divisor" style="margin: 24px 0"></div>
+        <div class="dash-mid-grid">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div class="dash-panel-dot"></div>
+              <span class="dash-panel-titulo">Detritos por origem</span>
+            </div>
+            <div class="dash-panel-corpo">
+              <div class="dash-barra-item">
+                <div class="dash-barra-topo">
+                  <span class="dash-barra-label">Fragmentos de colisão</span>
+                  <span class="dash-barra-pct pink">82%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:82%; background:var(--pink)"></div>
+                </div>
+                <div class="dash-barra-sub">~22.140 objetos</div>
+              </div>
+              <div class="dash-barra-item">
+                <div class="dash-barra-topo">
+                  <span class="dash-barra-label">Satélites inativos</span>
+                  <span class="dash-barra-pct cyan">11%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:11%; background:var(--cyan)"></div>
+                </div>
+                <div class="dash-barra-sub">~2.970 objetos</div>
+              </div>
+              <div class="dash-barra-item">
+                <div class="dash-barra-topo">
+                  <span class="dash-barra-label">Estágios de foguete</span>
+                  <span class="dash-barra-pct purple">7%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:7%; background:#9b5de5"></div>
+                </div>
+                <div class="dash-barra-sub">~1.890 objetos</div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div class="dash-panel-dot cyan"></div>
+              <span class="dash-panel-titulo">Distribuição por órbita</span>
+            </div>
+            <div class="dash-panel-corpo dash-panel-corpo-col" style="padding:0">
+              <div class="dash-orbita-item">
+                <div class="dash-orbita-topo">
+                  <span class="dash-orbita-badge pink">LEO</span>
+                  <span class="dash-orbita-nome">Low Earth Orbit · 160–2.000 km</span>
+                  <span class="dash-orbita-pct pink">68%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:68%; background:var(--pink)"></div>
+                </div>
+                <div class="dash-barra-sub">ISS, Starlink, satélites de observação</div>
+              </div>
+              <div class="dash-orbita-item">
+                <div class="dash-orbita-topo">
+                  <span class="dash-orbita-badge purple">MEO</span>
+                  <span class="dash-orbita-nome">Medium Earth Orbit · 2.000–35.786 km</span>
+                  <span class="dash-orbita-pct purple">12%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:12%; background:#9b5de5"></div>
+                </div>
+                <div class="dash-barra-sub">GPS, Galileo, Glonass</div>
+              </div>
+              <div class="dash-orbita-item">
+                <div class="dash-orbita-topo">
+                  <span class="dash-orbita-badge cyan">GEO</span>
+                  <span class="dash-orbita-nome">Geostationary Orbit · ~35.786 km</span>
+                  <span class="dash-orbita-pct cyan">20%</span>
+                </div>
+                <div class="dash-barra-track">
+                  <div class="dash-barra-fill" style="width:20%; background:var(--cyan)"></div>
+                </div>
+                <div class="dash-barra-sub">TV por satélite, meteorologia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-bot-grid">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div class="dash-panel-dot" style="background:#f0c040; box-shadow:0 0 8px rgba(240,192,64,.6)"></div>
+              <span class="dash-panel-titulo">Ranking — países com mais detritos</span>
+            </div>
+            <div class="dash-panel-corpo dash-panel-corpo-col" style="gap:0; padding:0">
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:#f0c040">01</div>
+                <div class="dash-rank-flag">🇷🇺</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">Rússia / URSS</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:100%; background:#f0c040; opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:#f0c040">7.785</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:#9d8ab5">02</div>
+                <div class="dash-rank-flag">🇺🇸</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">EUA</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:79%; background:#9d8ab5; opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:#9d8ab5">6.145</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:#f0c040">03</div>
+                <div class="dash-rank-flag">🇨🇳</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">China</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:63%; background:#f0c040; opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:#f0c040">4.923</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:var(--pink)">04</div>
+                <div class="dash-rank-flag">🇪🇺</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">ESA (Europa)</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:13%; background:var(--pink); opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:var(--pink)">1.020</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:var(--cyan)">05</div>
+                <div class="dash-rank-flag">🇯🇵</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">Japão</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:6%; background:var(--cyan); opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:var(--cyan)">480</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:var(--pink)">06</div>
+                <div class="dash-rank-flag">🇮🇳</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">Índia</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:5%; background:var(--pink); opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:var(--pink)">410</div>
+              </div>
+              <div class="dash-rank-item">
+                <div class="dash-rank-pos" style="color:#7a6a90">07</div>
+                <div class="dash-rank-flag">🌍</div>
+                <div class="dash-rank-info">
+                  <div class="dash-rank-nome">Outros</div>
+                  <div class="dash-barra-track" style="margin-top:5px">
+                    <div class="dash-barra-fill" style="width:3%; background:#7a6a90; opacity:0.8"></div>
+                  </div>
+                </div>
+                <div class="dash-rank-contagem" style="color:#7a6a90">237</div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <div class="dash-panel-dot" style="background:#ff6b35; box-shadow:0 0 8px rgba(255,107,53,.6)"></div>
+              <span class="dash-panel-titulo">Eventos históricos críticos</span>
+            </div>
+            <div class="dash-panel-corpo dash-panel-corpo-col" style="gap:0; padding:0">
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:var(--cyan); border-color:rgba(0,229,255,.2); background:rgba(0,229,255,.08)"><i class="fas fa-rocket"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano cyan">1957</div>
+                  <div class="dash-tl-texto">Sputnik 1 — primeiro satélite artificial da história</div>
+                </div>
+              </div>
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:#f0c040; border-color:rgba(240,192,64,.2); background:rgba(240,192,64,.08)"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano" style="color:#f0c040">1978</div>
+                  <div class="dash-tl-texto">Donald Kessler propõe a Síndrome de Kessler</div>
+                </div>
+              </div>
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:var(--pink); border-color:rgba(255,52,142,.2); background:rgba(255,52,142,.08)"><i class="fas fa-bomb"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano pink">2007</div>
+                  <div class="dash-tl-texto">China destrói satélite Fengyun-1C — mais de 3.000 novos detritos</div>
+                </div>
+              </div>
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:var(--pink); border-color:rgba(255,52,142,.2); background:rgba(255,52,142,.08)"><i class="fas fa-explosion"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano pink">2009</div>
+                  <div class="dash-tl-texto">Colisão Iridium 33 × Cosmos 2251 — mais de 2.000 detritos</div>
+                </div>
+              </div>
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:#f0c040; border-color:rgba(240,192,64,.2); background:rgba(240,192,64,.08)"><i class="fas fa-exclamation"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano" style="color:#f0c040">2021</div>
+                  <div class="dash-tl-texto">Rússia destrói Kosmos 1408 — mais de 1.500 detritos rastreáveis</div>
+                </div>
+              </div>
+              <div class="dash-tl-item">
+                <div class="dash-tl-icone" style="color:#00ff88; border-color:rgba(0,255,136,.2); background:rgba(0,255,136,.08)"><i class="fas fa-magnet"></i></div>
+                <div class="dash-tl-conteudo">
+                  <div class="dash-tl-ano" style="color:#00ff88">2026</div>
+                  <div class="dash-tl-texto">ClearSpace-1 (ESA) planeja primeira captura ativa de detrito</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-panel dash-chat-panel">
+          <div class="dash-panel-header">
+            <div class="dash-panel-dot"></div>
+            <span class="dash-panel-titulo">SpaceBot — Assistente IA</span>
+            <div class="dash-chat-status">
+              <div class="dash-chat-status-dot" id="chat-status-dot"></div>
+              <span id="chat-status-texto">ONLINE</span>
+            </div>
+          </div>
+          <div class="dash-chat-chips" id="chat-chips">
+            <button class="dash-chip" data-msg="O que é lixo espacial?"><i class="fas fa-question-circle"></i> O que é lixo espacial?</button>
+            <button class="dash-chip" data-msg="O que é a Síndrome de Kessler?"><i class="fas fa-exclamation-triangle"></i> Síndrome de Kessler</button>
+            <button class="dash-chip" data-msg="Qual país tem mais detritos no espaço?"><i class="fas fa-trophy"></i> Ranking de países</button>
+            <button class="dash-chip" data-msg="Como o lixo espacial afeta nossa vida?"><i class="fas fa-globe-americas"></i> Impacto no cotidiano</button>
+            <button class="dash-chip" data-msg="Quais missões existem para limpar o espaço?"><i class="fas fa-rocket"></i> Missões de limpeza</button>
+          </div>
+          <div class="dash-chat-mensagens" id="chat-mensagens">
+            <div class="dash-chat-msg bot">
+              <div class="dash-chat-avatar">🤖</div>
+              <div class="dash-chat-balao">
+                Olá! Sou o <strong>SpaceBot</strong> 🛰 Pergunte sobre lixo espacial,
+                órbitas, satélites ou missões de limpeza. Como posso ajudar?
+              </div>
+            </div>
+          </div>
+          <div class="dash-chat-input-row">
+            <input
+              type="text"
+              id="chat-input"
+              class="dash-chat-input"
+              placeholder="Digite sua pergunta sobre lixo espacial..."
+              maxlength="300"
+              autocomplete="off"
+            >
+            <button class="dash-chat-enviar" id="chat-enviar">➤</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
@@ -44,7 +355,6 @@
           <ul class="footer-links">
             <li><a href="./simulador.html">Simulador Orbital</a></li>
             <li><a href="./dashboard.html">Dashboard</a></li>
-            <li><a href="./quiz.html">Quiz</a></li>
             <li><a href="./missoes.html">Missões</a></li>
           </ul>
         </div>
@@ -64,6 +374,5 @@
       </div>
     </div>
   </footer>
-  <script src="/JS/nav.js"></script>
 </body>
 </html>
