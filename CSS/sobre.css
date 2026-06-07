@@ -1,0 +1,234 @@
+/* Estilos para o topo do com gradient de fundo */
+.sobre-hero {
+    padding: calc(var(--nav-altura) + 3rem) 0 3rem;
+    position: relative;
+}
+
+/* Efeito de gradiente radial no fundo */
+.sobre-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background-color: radial-gradient(ellipse 70% 80% at 30% 60%, rgba(255, 52, 142, 0.06)0%, transparent 60%);
+    pointer-events: none;
+}
+
+.sobre-tag {
+    font-family: var(--font-corpo);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pink);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.page-hero-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin: 8px 0 16px;
+}
+
+.sobre-desc {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: var(--texto-2);
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+.sobre-resumo-secao {
+    padding: 5rem 0;
+}
+
+/* Cards em 3 colunas para destacar os números e fatos importantes sobre o texto em geral */
+.sobre-resumo {
+    display: grid;
+    grid-template-columns: repeat (3 , 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sobre-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: var(--transicao);
+    text-align: left;
+}
+
+.sobre-card:hover {
+    border-color: var(--pink-borda);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 52, 142, 0.1);
+}
+
+.sobre-card-Numero {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--pink);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--texto);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.sobre-texto {
+    font-size: 0.9rem;
+    color: var(--texto-2);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Estilos para o rodapé Define o layout em grid com 3 colunas para organizar 
+as informações: logo/descrição, links plataforma, links informações */ 
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-logo span {
+    color: var(--pink);
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    color: var(--texto-2);
+    line-height: 1.7;
+    max-width: 400px;
+    margin: 0;
+}
+
+.footer-col-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texto);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.footer-linkk {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.footer-link li {
+    list-style: none;
+}
+
+.footer-link a {
+    font-size: 0.9rem;
+    color: var(--texto-2);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-link a:hover {
+    color: var(--cyan);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--texto-2);   
+}
+
+@media (max-width: 900px) {
+    .footer-resumo {
+        
+    }
+
+    .footer-grid {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero-titulo {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sobre-desc {
+        text-align: center;
+    }
+
+    .sobre-card {
+        text-align: center;
+    }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    
+        .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+        }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sobre-card {
+    animation: fadeInUp 0.5s ease both;
+}
+
