@@ -119,28 +119,6 @@
 .stat-card-valor  { font-family: var(--fonte-titulo); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem; }
 .stat-card-label  { font-size: 0.7rem; color: var(--texto-2); text-transform: uppercase; letter-spacing: 1px; }
 
-.curiosidade-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.curiosidade-texto {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  font-style: italic;
-  color: var(--texto);
-  line-height: 1.6;
-  padding: 2rem 2.5rem;
-  border: 1px solid var(--cyan-borda);
-  border-radius: var(--raio);
-  background: var(--bg-card);
-  transition: opacity 0.3s ease;
-}
-
 @media (max-width: 500px) {
     .hero div {
         display: flex;
