@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Seleciona elementos da navbar
+
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('.nav-link');
@@ -14,7 +15,6 @@ window.addEventListener('scroll', function() {
         navbar.classList.add('rolada',window.scrollY > 50);
     }
 });
-
 
 // ── TOGGLE DO MENU MOBILE ─────────────────────────
 // Abre/fecha menu quando clica no botão .
