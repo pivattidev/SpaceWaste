@@ -244,12 +244,12 @@
     }
     .footer-logo span { color: var(--pink); }
     .footer-desc { font-size: 0.85rem; color: var(--texto-2); line-height: 1.7; max-width: 300px; }
-    .footer-col-titulo {
+    .footer-col-titulo {     
       font-family: var(--fonte-titulo);
       font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--pink);
+      color: var(--pink); 
       margin-bottom: 1rem;
     }
     .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -298,22 +298,23 @@
 
     /* ── ANIMAÇÕES DE ENTRADA ────────────────────────────────────────── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+
+    .sobre-card{
+      animation: fadeUp 0.6s ease both;
     }
 
-    .faq-item {
-      animation: fadeUp 0.5s ease both;
-    }
-    .faq-item:nth-child(1) { animation-delay: 0.05s; }
-    .faq-item:nth-child(2) { animation-delay: 0.12s; }
-    .faq-item:nth-child(3) { animation-delay: 0.19s; }
-    .faq-item:nth-child(4) { animation-delay: 0.26s; }
-    .faq-item:nth-child(5) { animation-delay: 0.33s; }
-
-    .faq-stat-card {
-      animation: fadeUp 0.5s ease both;
-    }
-    .faq-stat-card:nth-child(1) { animation-delay: 0.0s; }
-    .faq-stat-card:nth-child(2) { animation-delay: 0.08s; }
-    .faq-stat-card:nth-child(3) { animation-delay: 0.16s; }
+    .sobre-card:nth-child(1) { animation-delay: 0.5s; }
+    .sobre-card:nth-child(2) { animation-delay: 0.10s; }
+    .sobre-card:nth-child(3) { animation-delay: 0.15s; }
+    .sobre-card:nth-child(4) { animation-delay: 0.20s; }
+    .sobre-card:nth-child(5) { animation-delay: 0.25s; }
