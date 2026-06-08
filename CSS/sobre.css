@@ -249,7 +249,7 @@
       font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--pink); kaua
+      color: var(--pink); 
       margin-bottom: 1rem;
     }
     .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
