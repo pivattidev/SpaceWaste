@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  generateStars();
+
   var form       = document.getElementById('sim-form');
   var resultado  = document.getElementById('sim-resultado');
   var vazio      = document.getElementById('sim-vazio');
