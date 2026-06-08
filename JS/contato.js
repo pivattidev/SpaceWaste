@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  generateStars();
+
   var form           = document.getElementById('contato-form');
   var formContainer  = document.getElementById('form-container');
   var formSucesso    = document.getElementById('form-sucesso');
