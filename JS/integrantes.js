@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  generateStars();
+
   var cards = document.querySelectorAll('.member-card');
 
   cards.forEach(function(card) {
