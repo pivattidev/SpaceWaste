@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  generateStars();
+
   var curiosidades = [
     'Um detrito de 10 cm pode destruir completamente um satélite operacional.',
     'A velocidade média dos detritos é de 28.000 km/h — 8x mais rápido que uma bala.',
