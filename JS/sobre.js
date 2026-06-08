@@ -2,6 +2,7 @@
 // Aguarda o carregamento completo do HTML
 document.addEventListener('DOMContentLoaded', function() {
 
+    generateStars()
 // Seleciona elementos da navbar
 
 const navbar = document.getElementById('navbar');

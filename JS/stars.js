@@ -9,17 +9,17 @@ function generateStars() {
   var largura, altura;
 
   var camadas = [
-    { quantidade: 180, tamanhoMin: 0.3, tamanhoMax: 0.8, opacidadeMin: 0.2, opacidadeMax: 0.5 },
-    { quantidade: 70,  tamanhoMin: 0.8, tamanhoMax: 1.5, opacidadeMin: 0.4, opacidadeMax: 0.8 },
-    { quantidade: 20,  tamanhoMin: 1.5, tamanhoMax: 2.5, opacidadeMin: 0.6, opacidadeMax: 1.0 },
+    { quantidade: 180, tamanhoMin: 0.2, tamanhoMax: 0.5, opacidadeMin: 0.1, opacidadeMax: 0.3 },
+    { quantidade: 70,  tamanhoMin: 0.5, tamanhoMax: 0.9, opacidadeMin: 0.2, opacidadeMax: 0.5 },
+    { quantidade: 20,  tamanhoMin: 0.9, tamanhoMax: 1.2, opacidadeMin: 0.3, opacidadeMax: 0.6 },
   ];
 
   var cores = [
-    'rgba(255, 255, 255,', 
     'rgba(255, 255, 255,',
     'rgba(255, 255, 255,',
-    'rgba(255, 220, 240,', 
-    'rgba(200, 240, 255,',  
+    'rgba(255, 255, 255,',
+    'rgba(255, 220, 240,',
+    'rgba(200, 240, 255,',
   ];
 
   function aleatorio(min, max) {
@@ -28,13 +28,13 @@ function generateStars() {
 
   function criarEstrela(camada) {
     return {
-      x:             Math.random() * largura,
-      y:             Math.random() * altura,
-      tamanho:       aleatorio(camada.tamanhoMin, camada.tamanhoMax),
-      opacidade:     aleatorio(camada.opacidadeMin, camada.opacidadeMax),
-      opacidadeAlvo: aleatorio(camada.opacidadeMin, camada.opacidadeMax),
+      x:                Math.random() * largura,
+      y:                Math.random() * altura,
+      tamanho:          aleatorio(camada.tamanhoMin, camada.tamanhoMax),
+      opacidade:        aleatorio(camada.opacidadeMin, camada.opacidadeMax),
+      opacidadeAlvo:    aleatorio(camada.opacidadeMin, camada.opacidadeMax),
       velocidadePiscar: aleatorio(0.005, 0.1),
-      cor: cores[Math.floor(Math.random() * cores.length)],
+      cor:              cores[Math.floor(Math.random() * cores.length)],
     };
   }
 
