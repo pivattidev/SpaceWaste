@@ -168,23 +168,60 @@
     /* ── SECAO ───────────────────────────────────────────────────────── */
     .secao { padding: 5rem 0; }
 
-    /* ── Sobre ACCORDION ───────────────────────────────────────────────── */
-    .sobre-lista {
+    /* ── Sobre ACCORDION .. ───────────────────────────────────────────────── */
+
+    .sobre-resumo {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .sobre-card {
+      background-color:  var(--bg-card);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio);
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      margin-top: 1.5rem;
+      transition: var(--transicao);
+      text-align: left;
+      position: relative;
+      box-sizing: border-box;
     }
-    
-    .sobre-texto {
-      font-family: var(--fonte-corpo);
-      font-size: 1rem;
-      letter-spacing: 2px;
-      color: var(--texto);
+
+    .sobre-card:hover {
+      border-color: var(--pink-borda);
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(255, 52, 142, 0.15), 0 10px rgba(255, 52, 142, 0.1);
+    }
+
+    .sobre-card .sobre-numero {
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--pink);
       display: block;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(255, 52, 142, 0.3);
     }
-   
+
+    .sobre-titulo{
+      font-family: var(--fonte-titulo);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--texto);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      transition: color 0.3s ease;
+    }
+
+    .sobre-card:hover .sobre-titulo {
+      color: var(--pink);
+    }
 
     /* ── FOOTER ──────────────────────────────────────────────────────── */
     .footer {
@@ -207,12 +244,12 @@
     }
     .footer-logo span { color: var(--pink); }
     .footer-desc { font-size: 0.85rem; color: var(--texto-2); line-height: 1.7; max-width: 300px; }
-    .footer-col-titulo {
+    .footer-col-titulo {     
       font-family: var(--fonte-titulo);
       font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--pink);
+      color: var(--pink); 
       margin-bottom: 1rem;
     }
     .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -261,22 +298,23 @@
 
     /* ── ANIMAÇÕES DE ENTRADA ────────────────────────────────────────── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+
+    .sobre-card{
+      animation: fadeUp 0.6s ease both;
     }
 
-    .faq-item {
-      animation: fadeUp 0.5s ease both;
-    }
-    .faq-item:nth-child(1) { animation-delay: 0.05s; }
-    .faq-item:nth-child(2) { animation-delay: 0.12s; }
-    .faq-item:nth-child(3) { animation-delay: 0.19s; }
-    .faq-item:nth-child(4) { animation-delay: 0.26s; }
-    .faq-item:nth-child(5) { animation-delay: 0.33s; }
-
-    .faq-stat-card {
-      animation: fadeUp 0.5s ease both;
-    }
-    .faq-stat-card:nth-child(1) { animation-delay: 0.0s; }
-    .faq-stat-card:nth-child(2) { animation-delay: 0.08s; }
-    .faq-stat-card:nth-child(3) { animation-delay: 0.16s; }
+    .sobre-card:nth-child(1) { animation-delay: 0.5s; }
+    .sobre-card:nth-child(2) { animation-delay: 0.10s; }
+    .sobre-card:nth-child(3) { animation-delay: 0.15s; }
+    .sobre-card:nth-child(4) { animation-delay: 0.20s; }
+    .sobre-card:nth-child(5) { animation-delay: 0.25s;  }
