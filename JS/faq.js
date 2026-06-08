@@ -1,4 +1,8 @@
- const navbar = document.getElementById('navbar');
+document.addEventListener('DOMContentLoaded', () => {
+  generateStars();
+});
+
+const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('rolada', window.scrollY > 20);
     });
