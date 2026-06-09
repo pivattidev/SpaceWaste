@@ -1,12 +1,15 @@
 <div align="center">
 
-# 🚀 SpaceWaste
+<h1>
+  🚀 Space<span>Waste</span>
+</h1>
 
 ### Plataforma educacional sobre lixo espacial, exploração orbital e sustentabilidade no espaço.
 
 ![Status](https://img.shields.io/badge/status-finalizado-00e5ff?style=for-the-badge)
 ![FIAP](https://img.shields.io/badge/FIAP-Global%20Solution-ff348e?style=for-the-badge)
 ![AstroDevs](https://img.shields.io/badge/equipe-AstroDevs-9b5de5?style=for-the-badge)
+![Deploy](https://img.shields.io/badge/deploy-Vercel-00e5ff?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 <br>
@@ -20,7 +23,14 @@
 
 <strong>SpaceWaste</strong> é um projeto acadêmico desenvolvido para a <strong>FIAP Global Solution 2026</strong>, com foco em conscientizar sobre o problema do lixo espacial e seus impactos para satélites, telecomunicações, GPS, missões científicas e para o futuro da exploração espacial.
 
-[🔗 Acessar Repositório](https://github.com/pivattidev/SpaceWaste)
+<br>
+
+<a href="https://spacewaste.vercel.app/">
+  <img src="https://img.shields.io/badge/🌐%20ACESSAR%20SITE-00e5ff?style=for-the-badge" alt="Acessar site">
+</a>
+<a href="https://github.com/pivattidev/SpaceWaste">
+  <img src="https://img.shields.io/badge/🔗%20REPOSITÓRIO-ff348e?style=for-the-badge" alt="Acessar repositório">
+</a>
 
 </div>
 
@@ -32,6 +42,7 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura de Pastas](#estrutura-de-pastas)
 - [Páginas do Projeto](#páginas-do-projeto)
+- [Site Online](#site-online)
 - [Como Executar o Projeto](#como-executar-o-projeto)
 - [Autores e Créditos](#autores-e-créditos)
 - [Link do Repositório](#link-do-repositório)
@@ -64,6 +75,12 @@ A plataforma foi criada para tornar o tema mais acessível e visual, reunindo:
 | **JavaScript** | Interatividade, validações, navegação, simulador, dashboard e animações |
 | **Font Awesome** | Ícones utilizados em cards, navegação, botões e links sociais |
 | **Google Fonts** | Fontes Orbitron e Exo 2 para reforçar a estética futurista |
+
+<div align="center">
+
+![Linha Neon](https://capsule-render.vercel.app/api?type=rect&height=3&color=gradient&customColorList=6,12,20)
+
+</div>
 
 ---
 
@@ -127,9 +144,27 @@ SpaceWaste/
 
 ---
 
+## 🌐 Site Online
+
+O projeto também está publicado e pode ser acessado diretamente pelo navegador, sem precisar clonar o repositório:
+
+🔗 **Acesse:** [https://spacewaste.vercel.app/](https://spacewaste.vercel.app/)
+
+Essa é a forma mais rápida de navegar pela plataforma, testar as páginas responsivas e visualizar o projeto completo em funcionamento.
+
+---
+
 ## ▶️ Como Executar o Projeto
 
 Como o projeto foi desenvolvido com HTML, CSS e JavaScript puros, não é necessário instalar dependências.
+
+Você pode acessar a versão publicada:
+
+```text
+https://spacewaste.vercel.app/
+```
+
+Ou executar localmente seguindo os passos abaixo:
 
 1. Clone o repositório:
 
@@ -167,6 +202,8 @@ Projeto desenvolvido pelo grupo **AstroDevs** para a **FIAP Global Solution 2026
 
 GitHub: [https://github.com/pivattidev/SpaceWaste](https://github.com/pivattidev/SpaceWaste)
 
+Site publicado: [https://spacewaste.vercel.app/](https://spacewaste.vercel.app/)
+
 ---
 
 ## 📬 Contato
@@ -176,6 +213,7 @@ Para dúvidas, sugestões ou feedbacks sobre o projeto:
 - **E-mail da equipe:** astrodevs@gmail.com
 - **Instituição:** FIAP - São Paulo, SP
 - **Repositório:** [SpaceWaste no GitHub](https://github.com/pivattidev/SpaceWaste)
+- **Site online:** [spacewaste.vercel.app](https://spacewaste.vercel.app/)
 
 ---
 
@@ -185,7 +223,17 @@ Feito com HTML, CSS, JavaScript e muita órbita pelo grupo <strong>AstroDevs</st
 
 <br>
 
-<strong>Space<span style="color:#ff348e">Waste</span></strong> • FIAP Global Solution 2026
+<a href="https://spacewaste.vercel.app/">
+  <img src="https://img.shields.io/badge/SpaceWaste-00e5ff?style=for-the-badge" alt="SpaceWaste">
+</a>
+<a href="https://github.com/pivattidev/SpaceWaste">
+  <img src="https://img.shields.io/badge/GitHub-ff348e?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+
+<br>
+<br>
+
+<strong>SpaceWaste</strong> • FIAP Global Solution 2026
 <p align="center">
   <img src ="https://fiap-achievements.vercel.app/api/badge?theme=dark&badge=gs&year=2026&topic=space-connect" width="150"/>
 </p>
