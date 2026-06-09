@@ -1,24 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Geração de estrelas
   generateStars();
 
+  // Lógica do simulador de órbita
   var form       = document.getElementById('sim-form');
   var resultado  = document.getElementById('sim-resultado');
   var vazio      = document.getElementById('sim-vazio');
   var btnResetar = document.getElementById('btn-resetar');
 
+  // Evento de submit do formulário
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // Validação de cada campo do formulário
     var nomeValido     = validarCampo('nome');
     var altitudeValida = validarCampo('altitude');
     var massaValida    = validarCampo('massa');
     var tipoValido     = validarCampo('tipo');
 
+    // Se algum campo for inválido, não prossegue com os cálculos
     if (!nomeValido || !altitudeValida || !massaValida || !tipoValido) {
       return;
     }
 
+    // Coleta dos valores do formulário
     var nome     = document.getElementById('nome').value.trim();
     var altitude = parseFloat(document.getElementById('altitude').value);
     var massa    = parseFloat(document.getElementById('massa').value);
@@ -29,27 +35,32 @@ document.addEventListener('DOMContentLoaded', function() {
     var reentrada  = calcularReentrada(altitude);
     var risco      = calcularRisco(altitude);
 
+    // Exibe os resultados no card
     mostrarResultado(nome, tipo, velocidade, periodo, reentrada, risco);
   });
 
+  // Evento do botão "Resetar"
   btnResetar.addEventListener('click', function() {
     resultado.classList.remove('visivel');
     vazio.style.display = 'flex';
     form.reset();
 
+    // Remove classes de inválido e mensagens de erro
     var grupos = form.querySelectorAll('.campo-grupo');
     grupos.forEach(function(grupo) {
       grupo.classList.remove('invalido');
     });
 
+    // Limpa mensagens de erro
     var erros = form.querySelectorAll('.campo-erro');
     erros.forEach(function(erro) {
       erro.textContent = '';
     });
   });
-
+ 
   var RAIO_TERRA = 6371;
 
+  // Funções de cálculo
   function calcularVelocidade(altitude) {
     var raioOrbita = RAIO_TERRA + altitude;
     var velocidadeKms = 7.9 * Math.sqrt(RAIO_TERRA / raioOrbita);
@@ -109,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Função para exibir os resultados no card
   function mostrarResultado(nome, tipo, velocidade, periodo, reentrada, risco) {
     var tiposNomes = {
       satelite: '🛰️ Satélite',
@@ -117,22 +129,26 @@ document.addEventListener('DOMContentLoaded', function() {
       cubesat:  '📦 CubeSat'
     };
 
+    // Preenche os campos do resultado com os valores calculados
     document.getElementById('res-nome').textContent      = nome;
     document.getElementById('res-tipo').textContent      = tiposNomes[tipo];
     document.getElementById('res-velocidade').textContent = velocidade;
     document.getElementById('res-periodo').textContent    = periodo;
     document.getElementById('res-reentrada').textContent  = reentrada;
 
+    // Exibe o nível de risco com cor e descrição
     var riscoValor = document.getElementById('res-risco');
     var riscoDesc  = document.getElementById('res-risco-desc');
     riscoValor.textContent  = risco.nivel;
     riscoValor.style.color  = risco.cor;
     riscoDesc.textContent   = risco.desc;
 
+    // Exibe o card de resultado e oculta a mensagem de vazio
     vazio.style.display = 'none';
     resultado.classList.add('visivel');
   }
 
+  // Função para validar campos do formulário
   function validarCampo(id) {
     var campo  = document.getElementById(id);
     var erro   = document.getElementById('erro-' + id);
@@ -140,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var valor  = campo.value.trim();
     var mensagem = '';
 
+    // Validações específicas para cada campo
     if (id === 'nome') {
       if (valor === '') {
         mensagem = 'Dê um nome ao objeto.';
@@ -172,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Exibe mensagem de erro ou marca o campo como válido
     if (mensagem !== '') {
       if (erro)  erro.textContent = mensagem;
       if (grupo) grupo.classList.add('invalido');

@@ -1,27 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Geração de estrelas
   generateStars();
 
+  // Validação e envio do formulário de contato
   var form           = document.getElementById('contato-form');
   var formContainer  = document.getElementById('form-container');
   var formSucesso    = document.getElementById('form-sucesso');
   var btnNova        = document.getElementById('btn-nova-mensagem');
 
+  // Evento de submit do formulário
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // Valida cada campo do formulário
     var nomeValido     = validarCampo('nome');
     var emailValido    = validarCampo('email');
     var assuntoValido  = validarCampo('assunto');
     var mensagemValida = validarCampo('mensagem');
 
+    // Se algum campo for inválido, não prossegue com o envio
     if (!nomeValido || !emailValido || !assuntoValido || !mensagemValida) {
       return; 
     }
 
+    // Simula envio do formulário
     mostrarSucesso();
   });
 
+  // Validação em tempo real ao perder o foco (blur) de cada campo
   var inputs = form.querySelectorAll('.campo-input');
   inputs.forEach(function(input) {
     input.addEventListener('blur', function() {
@@ -29,24 +36,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Evento do botão "Enviar nova mensagem"
   btnNova.addEventListener('click', function() {
     formSucesso.classList.remove('visivel');
 
+    // Exibe o formulário novamente
     formContainer.style.display = 'block';
 
+    // Limpa o formulário e remove classes de validação
     form.reset();
 
+    // Remove classes de válido/inválido e mensagens de erro
     var grupos = form.querySelectorAll('.campo-grupo');
     grupos.forEach(function(grupo) {
       grupo.classList.remove('valido', 'invalido');
     });
 
+    // Limpa mensagens de erro
     var erros = form.querySelectorAll('.campo-erro');
     erros.forEach(function(erro) {
       erro.textContent = '';
     });
   });
 
+  // Função para validar campos do formulário
   function validarCampo(id) {
     var campo  = document.getElementById(id);
     var erro   = document.getElementById('erro-' + id);
@@ -54,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var valor  = campo.value.trim();
     var mensagem = '';
 
+    // Validações específicas para cada campo
     if (id === 'nome') {
       if (valor === '') {
         mensagem = 'Nome é obrigatório.';
@@ -62,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Validação do campo de e-mail
     if (id === 'email') {
       var temArroba = valor.indexOf('@') > 0;
       var temPonto  = valor.lastIndexOf('.') > valor.indexOf('@');
@@ -72,12 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Validação do campo de assunto
     if (id === 'assunto') {
       if (valor === '') {
         mensagem = 'Selecione um assunto.';
       }
     }
 
+    // Validação do campo de mensagem
     if (id === 'mensagem') {
       if (valor === '') {
         mensagem = 'A mensagem não pode estar vazia.';
@@ -86,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Exibe mensagem de erro ou marca o campo como válido
     if (mensagem !== '') {
       erro.textContent = mensagem;
       grupo.classList.add('invalido');
@@ -101,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Função para mostrar mensagem de sucesso após envio do formulário
   function mostrarSucesso() {
     formContainer.style.display = 'none';
     formSucesso.classList.add('visivel');

@@ -264,15 +264,6 @@ main{
   margin-top: 2rem;
 }
 
-@media (max-width: 900px) {
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 500px) {
-  .grid-4 { grid-template-columns: 1fr; }
-}
-
 .card {
   background: var(--bg-card);
   border: 1px solid var(--borda);
@@ -324,6 +315,7 @@ main{
 
 .card-link:hover .card-link-texto { letter-spacing: 2px; }
 
+ /* -- FOOTER -- */
 .footer {
   border-top: 1px solid var(--pink-borda);
   background: #050812;
@@ -383,6 +375,16 @@ main{
   border-top: 1px solid var(--borda);
   font-size: 0.75rem;
   color: var(--texto-2);
+}
+
+/* -- MOBILE -- */
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .grid-4 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {

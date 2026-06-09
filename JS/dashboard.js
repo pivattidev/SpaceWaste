@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Geração de estrelas
   generateStars();
 
+  // SIMULAÇÃO DE CHATBOT
   var mensagensEl = document.getElementById('chat-mensagens');
   var inputEl     = document.getElementById('chat-input');
   var enviarBtn   = document.getElementById('chat-enviar');
