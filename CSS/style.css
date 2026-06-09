@@ -78,7 +78,7 @@ main{
     justify-content: space-between;
     padding: 0 2rem;
     z-index: 100;
-    transition: backgroundw var(--transicao), border-color var(--transicao);
+    transition: background var(--transicao), border-color var(--transicao);
     border-bottom: 1px solid transparent;
 }
 
