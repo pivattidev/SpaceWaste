@@ -8,9 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="../CSS/sobre.css">
-  <script src="../JS/nav.js" defer></script>
-  <script src="../JS/sobre.js" defer></script>
-  <script src="../JS/stars.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -18,9 +15,7 @@
       Space<span>Waste</span>
     </a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html">Início</a></li>
@@ -34,98 +29,124 @@
     </ul>
   </nav>
   <main>
+    <!-- HERO -->
     <section class="page-hero">
       <div class="container">
-        <span class="label-tag">sobre a spacewaste </span>
+        <span class="secao-label">Sobre a SpaceWaste</span>
         <h1 class="page-hero-titulo">
           Sobre <span class="cyan">Space</span><span class="pink">Waste</span>
         </h1>
-        <p class="page-hero-desc"> Conheça o proposito e a missão do projeto SpaceWaste </p>
+        <p class="page-hero-desc">
+          Conheça o propósito e a missão do projeto SpaceWaste.
+        </p>
       </div>
       <div class="page-hero-linha"></div>
     </section>
-  <div class="divisor"></div>
-    <section class="sobre-secao">
+    <div class="divisor"></div>
+    <!-- SEÇÃO: INTRODUÇÃO EM TEXTO -->
+    <section class="secao">
       <div class="container">
+        <span class="secao-label">Por que esse projeto existe</span>
+        <h2 class="secao-titulo">O problema que <span class="pink">ninguém fala</span></h2>
+        <div class="sobre-intro">
+          <p>
+            Nós, do <strong class="pink">AstroDevs</strong>, escolhemos trabalhar sobre lixo espacial porque,
+            apesar de ser um grande problema para nossa sociedade, o tema raramente é abordado.
+            Satélites de comunicação, GPS, previsão do tempo e monitoramento climático fazem
+            parte da infraestrutura invisível da vida moderna — e todos estão em risco.
+          </p>
+          <p>
+            O SpaceWaste foi criado para mudar isso. A plataforma transforma um tema complexo
+            em páginas, gráficos e simulações fáceis de entender, alinhadas ao
+            <strong class="cyan">ODS 13 da ONU — Ação Climática</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
+    <!-- SEÇÃO: CARDS DE NÚMEROS -->
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">O problema em números</span>
+        <h2 class="secao-titulo">Dados que <span class="pink">assustam</span></h2>
         <div class="sobre-grid">
-
-        <article class="sobre-card">
-        <span class="sobre-numero">27k+</span>
-        <h2 class="sobre-titulo">Destritos Monitorados</h2>
-        <p class="sobre-desc">
-          Mais de 27 mil objetos são acompanhados em órbita, entre satélites inativos,
-          partes de foguetes e fragmentos de colisões.
-        </p>
-      </article>
-      <article class="sobre-card">
-        <span class="sobre-numero">ODS 13</span>
-          <h2 class="sobre-titulo"> Ação contra a mudança global do clima</h2>
-            <p class="sobre-desc">
-              Satélites ajudam a monitorar clima, queimadas, oceanos e desmatamento.
-              Proteger a órbita também ajuda a proteger esses dados.
-            </p>
-      </article>
-            <article class="sobre-card">
-        <span class="sobre-numero">Educação</span>
-          <h2 class="sobre-titulo">Aprendizado visual</h2>
-            <p class="sobre-desc">
-              A plataforma transforma um tema complexo em páginas, gráficos e simulações
-              mais fáceis de entender
-            </p>
-      </article>
           <article class="sobre-card">
-            <span class="sobre-numero">01</span>
-              <h2 class="sobre-titulo">Por que SpaceWaste? </h2>
-                <p class="sobre-desc"> Nós, do AstroDevs, escolhemos trabalhar sobre lixo espacial, que, 
-                  apesar de ser um grande problema para nossa sociedade,não é muito abordado. 
-                  Então, decidimos dar mais destaque para esse assunto tão importante.</p>
-            </span>
+            <span class="sobre-numero">27k+</span>
+            <h3 class="sobre-card-titulo">Detritos monitorados</h3>
+            <p class="sobre-card-desc">
+              Mais de 27 mil objetos são acompanhados em órbita — satélites inativos,
+              partes de foguetes e fragmentos de colisões.
+            </p>
           </article>
-            <article class="sobre-card">
-        <span class="sobre-numero">02</span>
-          <h2 class="sobre-titulo" >Qual problema o projeto resolve?</h2>
-            <p class="sobre-desc">
-                O projeto aborda a falta de conscientização sobre a poluição orbital.
-                Muitas pessoas usam serviços baseados em satélites, mas não percebem
-                que esses equipamentos podem ser danificados por fragmentos espaciais.
+          <article class="sobre-card">
+            <span class="sobre-numero">ODS 13</span>
+            <h3 class="sobre-card-titulo">Ação climática</h3>
+            <p class="sobre-card-desc">
+              Satélites ajudam a monitorar clima, queimadas, oceanos e desmatamento.
+              Proteger a órbita também protege esses dados essenciais.
             </p>
-      </article>
-            <article class="sobre-card">
-        <span class="sobre-numero">03</span>
-          <h2 class="sobre-titulo">Como a plataforma funciona?</h2>
-            <p class="sobre-desc">
-                O site reúne páginas explicativas, FAQ, dashboard de estatísticas e um
-                simulador de registro. Assim, o usuário entende o tema navegando por
-                exemplos visuais e interativos.
+          </article>
+          <article class="sobre-card">
+            <span class="sobre-numero">100M+</span>
+            <h3 class="sobre-card-titulo">Fragmentos não rastreáveis</h3>
+            <p class="sobre-card-desc">
+              Mais de 100 milhões de fragmentos menores que 1cm não podem ser
+              rastreados — e mesmo assim representam risco real de colisão.
             </p>
-      </article>
-            <article class="sobre-card">
-        <span class="sobre-numero">04</span>
-          <h2 class="sobre-titulo">Qual é a ligação com o ODS 13?</h2>
-            <p class="sobre-desc">
-                O ODS 13 fala sobre ação contra a mudança global do clima. Como satélites
-                são importantes para monitorar o planeta, cuidar da órbita também ajuda a
-                manter tecnologias climáticas funcionando.
+          </article>
+        </div>
+      </div>
+    </section>
+    <div class="divisor"></div>
+    <!-- SEÇÃO: PERGUNTAS EM TEXTO CORRIDO -->
+    <section class="secao">
+      <div class="container">
+        <span class="secao-label">Entenda o projeto</span>
+        <h2 class="secao-titulo">Perguntas <span class="cyan">frequentes</span></h2>
+        <div class="sobre-faq">
+          <div class="sobre-faq-item">
+            <h3 class="sobre-faq-pergunta">Qual problema o projeto resolve?</h3>
+            <p class="sobre-faq-resposta">
+              O projeto aborda a falta de conscientização sobre a poluição orbital.
+              Muitas pessoas usam serviços baseados em satélites, mas não percebem
+              que esses equipamentos podem ser danificados por fragmentos espaciais.
             </p>
-      </article>
-            <article class="sobre-card">
-        <span class="sobre-numero">05</span>
-          <h2 class="sobre-titulo">Por que esse tema importa?</h2>
-            <p class="sobre-desc">
-                Porque a órbita da Terra já faz parte da infraestrutura da sociedade.
-                Comunicação, segurança, ciência, clima e economia espacial dependem de
-                satélites. Se os detritos crescerem sem controle, esses serviços podem
-                ser prejudicados.
+          </div>
+          <div class="sobre-faq-item">
+            <h3 class="sobre-faq-pergunta">Como a plataforma funciona?</h3>
+            <p class="sobre-faq-resposta">
+              O site reúne páginas explicativas, FAQ, dashboard de estatísticas,
+              simulador de registro orbital e missões de limpeza. O usuário entende
+              o tema navegando por exemplos visuais e interativos.
             </p>
-      </article>
-  <div class="divisor"></div>
+          </div>
+          <div class="sobre-faq-item">
+            <h3 class="sobre-faq-pergunta">Qual é a ligação com o ODS 13?</h3>
+            <p class="sobre-faq-resposta">
+              O ODS 13 trata da ação contra a mudança global do clima. Como satélites
+              são essenciais para monitorar o planeta, cuidar da órbita também ajuda a
+              manter as tecnologias climáticas funcionando.
+            </p>
+          </div>
+          <div class="sobre-faq-item">
+            <h3 class="sobre-faq-pergunta">Por que esse tema importa?</h3>
+            <p class="sobre-faq-resposta">
+              A órbita da Terra já faz parte da infraestrutura da sociedade.
+              Comunicação, segurança, ciência, clima e economia espacial dependem de
+              satélites. Se os detritos crescerem sem controle, esses serviços podem
+              ser prejudicados por séculos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <div class="footer-logo">Space<span>Waste</span></div>
-          <p class="footer-desc"> educacional sobre lixo espacial. Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.</p>
+          <p class="footer-desc">Plataforma educacional sobre lixo espacial. Projeto acadêmico do grupo AstroDevs - FIAP Global Solution.</p>
         </div>
         <div>
           <p class="footer-col-titulo">Plataforma</p>
@@ -138,7 +159,6 @@
         <div>
           <p class="footer-col-titulo">Informações</p>
           <ul class="footer-links">
-
             <li><a href="./sobre.html">Sobre</a></li>
             <li><a href="./integrantes.html">Equipe</a></li>
             <li><a href="./faq.html">FAQ</a></li>
@@ -147,10 +167,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 <strong>SpaceWaste</strong> - AstroDevs</span>
+        <span>© 2026 <strong>SpaceWaste</strong> — AstroDevs</span>
         <span>Dados: NASA ODPO / ESA Space Debris Office</span>
       </div>
     </div>
   </footer>
+  <script src="../JS/stars.js"></script>
+  <script src="../JS/nav.js"></script>
+  <script src="../JS/sobre.js"></script>
 </body>
 </html>
