@@ -2,16 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   generateStars();
 });
 
-const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('rolada', window.scrollY > 20);
-    });
-
-    // Mobile nav toggle
-    document.getElementById('nav-toggle').addEventListener('click', () => {
-      document.getElementById('nav-links').classList.toggle('aberto');
-    });
-
     // FAQ Accordion
     document.querySelectorAll('.faq-pergunta').forEach(btn => {
       btn.addEventListener('click', () => {
