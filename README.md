@@ -93,7 +93,16 @@ SpaceWaste/
 │   ├── jardim.png
 │   ├── kaua.png
 │   ├── luiz.png
-│   └── pivatti.png
+│   ├── imagem1.png
+│   ├── imagem2.png
+│   ├── imagem3.png
+│   ├── imagem4.png
+│   ├── imagem5.png
+│   ├── imagem6.png
+│   ├── imagem7.png
+│   ├── imagem8.png
+│   ├── imagem9.png
+│   └── imagem10.png
 ├── CSS/
 │   ├── contato.css
 │   ├── dashboard.css
@@ -134,13 +143,21 @@ SpaceWaste/
 | Página | Descrição |
 | --- | --- |
 | `index.html` | Página inicial com apresentação do tema, estatísticas e acesso às áreas principais |
+<img src="./assets/imagem1.png" alt="Index"><img src="./assets/imagem2.png" alt="Index2"><img src="./assets/imagem3.png" alt="Index3">
 | `HTML/sobre.html` | Explicação sobre o projeto e sua motivação |
+<img src="./assets/imagem4.png" alt="Sobre">
 | `HTML/faq.html` | Perguntas frequentes sobre lixo espacial |
+<img src="./assets/imagem5.png" alt="FAQ">
 | `HTML/integrantes.html` | Página com os integrantes do grupo AstroDevs |
+<img src="./assets/imagem6.png" alt="Integrantes">
 | `HTML/contato.html` | Formulário e informações de contato |
+<img src="./assets/imagem7.png" alt="Contato">
 | `HTML/simulador.html` | Simulador orbital para registrar objetos e calcular reentrada |
+<img src="./assets/Imagem8.png" alt="Simulador">
 | `HTML/dashboard.html` | Painel visual com dados, gráficos e ranking |
+<img src="./assets/Imagem9.png" alt="Dashboard">
 | `HTML/missoes.html` | Conteúdo sobre missões de limpeza espacial |
+<img src="./assets/Imagem10.png" alt="Missoes">
 
 ---
 
